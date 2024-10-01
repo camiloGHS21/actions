@@ -1,0 +1,12 @@
+name: Test
+on: [push]
+jobs:
+  test-build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: install-test
+      run: |
+        echo "Hola Mondongo"
+        sudo apt-get update
+        sudo apt-get install -y python3-pip
+        echo "Finally installed"
