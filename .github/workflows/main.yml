@@ -4,6 +4,8 @@ jobs:
   test-build:
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout
+      uses: actions/checkout@v4.2.0
     - name: install-test
       run: |
         chmod +x script.sh
