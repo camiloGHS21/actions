@@ -1,0 +1,9 @@
+name: Test
+on: [push]
+jobs:
+  test-build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: install-test
+      run: |
+        chmod +x script.sh
