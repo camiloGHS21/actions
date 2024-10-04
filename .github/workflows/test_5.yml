@@ -1,0 +1,16 @@
+name: Example the Service 
+on: [push]
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: root
+        ports:
+          - 3306:3306
+       
+
+  
+
