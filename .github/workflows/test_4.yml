@@ -1,7 +1,7 @@
 name: Test Composite Action
 on: [push]
 jobs:
-  local-action:
+  test-build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
