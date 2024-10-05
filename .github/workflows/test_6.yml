@@ -11,6 +11,8 @@ jobs:
         env:
           STEP_MY_VAR: nivel step
         run: echo "valor ${{vars.MY_VARIABLE_1}}"
+      - name: Secret 
+        run: echo "secret ${{secrets.MY_SECRET}}"
 
   
 
