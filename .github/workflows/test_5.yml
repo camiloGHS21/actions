@@ -3,23 +3,11 @@ on: [push]
 jobs:
   say-hello:
     runs-on: ubuntu-latest
-    services:
-      mysql:
-        image: mysql:8.0
-        env:
-          MYSQL_ROOT_PASSWORD: root
-        ports:
-          - 3306:3306
-      redis:
-        image: redis:alpine
-        ports:
-          - 6379:6379
+    env:
+      MY_VAR: Mi variable de entorno
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      
       - name: Test
-        run: ls
+        run: echo "valor $MY_VAR"
 
   
 
