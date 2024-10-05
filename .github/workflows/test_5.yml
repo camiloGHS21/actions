@@ -7,7 +7,9 @@ jobs:
       MY_VAR: Mi variable de entorno
     steps:
       - name: Test
-        run: echo "valor $MY_VAR"
+        env:
+          STEP_MY_VAR: nivel step
+        run: echo "valor $STEP_MY_VAR"
 
   
 
